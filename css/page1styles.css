@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+			
+    * {
+        font-family: Lato;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: rotateX(-10deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    body {
+        margin: 0;
+        color: #2F3362;
+        overflow-x: hidden;
+        background-color:hsla(205, 46%, 95%, 0.767);
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        padding-left: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: #2F3362;
+        font-weight: bold;
+    }
+    
+    p {
+        padding-left: 20px;
+    }
+
+    nav {
+        background-color: #2F3362;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    nav > a {
+        float: left;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    nav > a:hover
+    {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    #charanav {
+        float: left;
+    }
+
+    #charanav > a {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    #charanav > a:hover {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    .charanav-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 3;
+    }
+
+    .charanav-content > a{
+        color: #0c114d;
+        padding: 5px 8px;
+        display: block;
+    }
+
+    .charanav-content > a:hover{
+        background-color: #e2e2e2
+    }
+
+    #charanav:hover .charanav-content {
+        display: block;
+    }
+
+    #trailer {
+        float: left;
+        position: relative;
+        width: 60%;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+
+    #trailercap {
+        width: 100%;
+        margin-bottom: 10px;
+        font-style: italic;
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #trailervid {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 3px;
+        border: #0c114d 5px solid;
+        border-radius: 10px;
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
+    }
+
+    #twt-timeline {
+        display: inline-block;
+        position: relative;
+        width: 27%;
+        height: 545px;
+        margin-top: 145px;
+        margin-left: 100px;
+        overflow: auto;
+        padding: 3px;
+        border: #0c114d 5px solid;
+        border-radius: 10px;
+
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
+    }
+
+    #synopsis {
+        position: static;
+        display: block;
+        margin-top: 50px;
+        padding-bottom: 100px;
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #synopsis > #totstart {
+        float: right;
+        width: 350px;
+        position: static;
+        top: 40px;
+        right: 70px;
+        margin-right: 50px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    
+    .indent {
+        padding-left: 100px;
+    }
+
+    #footer {
+        color: hsla(34, 9%, 85%, 0.965);
+        background-color: #3c406b;
+        overflow: hidden;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        font-size: 10px;
+        padding-top: 10px;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #references {
+        height: 90px;
+        overflow: auto;
+    }
+
+    #references::-webkit-scrollbar {
+        display: none;
+    }
+
+    #references > p {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: -8px;
+    }
+
+    #references > ul > li {
+        font-size: 15px;
+    }
+
+    #references > ul > li > a{
+        color: hsla(34, 9%, 85%, 0.965);
+        font-style: italic;
+    }
+
+    #references > ul > li > a:visited {
+        color: hsla(34, 9%, 85%, 0.965);
+    }
+
+    #socmeds {
+        float: right;
+        margin-top: -25px;
+        margin-right: 10px;
+    }
+
+    #twt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #twt > a {
+        background: url('../images/socmed icons.png') no-repeat 0 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #twt > a:hover {
+        opacity: 1;
+    }
+
+    #fb {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #fb > a {
+        background: url('../images/socmed icons.png') no-repeat -23px 0 ;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #fb > a:hover {
+        opacity: 1;
+    }
+
+    #yt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #yt > a {
+        background: url('../images/socmed icons.png') no-repeat -46px 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #yt > a:hover {
+        opacity: 1;
+    }

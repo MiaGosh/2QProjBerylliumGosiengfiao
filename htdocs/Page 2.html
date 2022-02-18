@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> All You Need To Know About Tears of Themis </title>
+		<meta charset="utf8" />
+		<meta name="author" content="Amelia N. Gosiengfiao" />
+		<meta name="Page 2" content="Content page to an all-in-one guide for the game 'Tears of Themis'" />
+		<meta name="keywords" content="guide, Tears of Themis, ToT" />
+		<meta name="date"  content="10/25/2021" />
+		<meta name="revised"  content="01/10/2022" />
+		
+		<link rel="icon" type="image/ico" href="../images/icon.ico" />
+        <link rel="stylesheet" href="../css/page2styles.css">
+	</head>
+	
+	<body>
+		<nav>
+            <a href="../index.html">HOMEPAGE</a>
+            <a href="Page 1.html">INTRODUCTION</a>
+            <a href="Page 2.html"><b>MECHANICS</b></a>
+            <div id="charanav">
+                <a href="Page 3.html" class ="charanav-button">CHARACTERS</a>
+                <div class="charanav-content">
+                    <a href="Artem.html">Artem Wing</a>
+                    <a href="Luke.html">Luke Pearce</a>
+                    <a href="Marius.html">Marius von Hagen</a>
+                    <a href="Vyn.html">Vyn Richter</a>
+                </div>
+            </div>
+            <a href="Page 4.html">EVENTS</a>
+        </nav>
+
+        <aside id="toc">
+            <h3>CONTENT</h3>
+            <hr class="hr1">
+            <ul>
+                <li><a href = "#geninfo">1. General Info</a></li>
+                    <li class = "indent2"><a href = "#gamemech">1.1. Game Mechanics</a></li>
+                    <li class = "indent2"><a href = "#deckmech">1.2. Deck Mechanics</a></li>
+                    <li class = "indent2"><a href = "#sot">1.3. Shadow of Themis</a></li>
+                    <li class = "indent2"><a href = "#quests">1.4. Quests</a></li>
+                    <li class = "indent2"><a href = "#mall">1.5. Mall</a></li>
+                <li><a href = "#gamemodes">2. Game Modes</a></li>
+                    <li class = "indent2"><a href = "#mainstory">2.1. Main Story</a></li>
+                    <li class = "indent2"><a href = "#anomaly">2.2. Anomaly Levels</a></li>
+                    <li class = "indent2"><a href = "#legalstu">2.3. Legal Studies</a></li>
+                    <li class = "indent2"><a href = "#trials">2.4. Trials of Themis</a></li>
+                    <li class = "indent2"><a href = "#temple">2.5. Temple of Trials</a></li>
+                    <li class = "indent2"><a href = "#visit">2.6. Character Visit</a></li>
+                    <li class = "indent2"><a href = "#fieldwork">2.7. Fieldwork</a></li>    
+                <li><a href = "#gamedata">3. Game Data</a></li>
+                    <li class = "indent2"><a href = "#cards">3.1. Cards</a></li>
+                    <li class = "indent2"><a href = "#nxx">3.2. NXX Headquarters</a></li>
+                    <li class = "indent2"><a href = "#charaprof">3.3. Character Profile</a></li>
+            </ul>
+        </aside>
+        
+        <section id="mechanics">
+            <section id="geninfo" class="section1">
+                <h2>GENERAL INFO</h2>
+
+                <section id="gamemech" class="section2">
+                    <h3 class="content">Game Mechanics</h3>
+
+                    <h4>Debates</h4>
+                    <image>
+                        <div id="div_imagedescription" class="side_image"><p id="imagedescription1" class="imagedescription"></p></div>
+                        <button id="next1" class="changeimage_next"></button>
+                        <button id="prev1" class="changeimage_prev"></button>
+                        <img id="win_screen" class="side_image">
+
+                        <script>
+                            var image1 = document.getElementById('win_screen');
+                            var images1=["../images/mechanics/screenshots/win screen.jpg", 
+                            "../images/mechanics/screenshots/main deck.jpg", 
+                            "../images/mechanics/screenshots/support deck.jpg", 
+                            "../images/mechanics/screenshots/deck tut.jpg"]
+                            var description1=["Debate Win Screen", "Main Deck", "Support Deck", "In-Game Deck Tutorial"]
+                            var order1 = 0;
+                    
+                            image1.src=images1[order1];
+                            document.getElementById('imagedescription1').innerHTML = description1[order1]
+                    
+                            document.getElementById('next1').onclick = function nextImage() {  
+                                order1++;
+                                if (order1 > 3) {
+                                    order1=0;
+                                }
+                                image1.src=images1[order1];
+                                document.getElementById('imagedescription1').innerHTML = description1[order1];
+                            };
+                    
+                            document.getElementById('prev1').onclick = function prevImage() {
+                                order1--;
+                                if (order1 < 0) {
+                                    order1=3;
+                                }
+                                image1.src=images1[order1];
+                                document.getElementById('imagedescription1').innerHTML = description1[order1];
+                            };
+                        </script>
+                    </image>
+
+                    <p class="indent2">In Tears of Themis, the battle stages are called “debates,” wherein an opponent with HP 
+                        (Health Points) will have various arguments against the player. Starting a debate costs AP (most of the time 10 AP). 
+                        To win against the opponent, the player attacks each argument individually by selecting their cards to use—it will both 
+                        deal damage to the argument and lower the opponent’s HP. <br><br>
+
+                        The player has a limited amount of turns to complete the stage; and each card selection counts as a turn. 
+                        If the player runs out of cards, they can refresh the deck at the cost of 1 turn. <br><br>
+                        
+                        On the other hand, the opponent counter attacks the player after each turn, dealing damage to lower the player’s HP. <br><br>
+                        
+                        Once all of the enemy’s arguments have been triumphed, the player wins the stage. However, 
+                        the player loses the stage if they either (1) run out of turns or (2) their HP reaches 0. <br>
+                    </p>
+
+                    <h4>Attributes</h4>
+                    <image>
+                        <img src="../images/mechanics/attributes1.png" id="attributes">
+                    </image>
+                    <p class="indent2">
+                        Just like other famous games, Tears of Themis also has an attribute system. Attributes are the so-called “type” 
+                        of the arguments and cards: Empathy, Intuition, Logic, and Null (only applicable to arguments).<br><br>
+
+                        The attribute the player selects will contribute to the amount of damage they will deal during a single attack. 
+                        If the player’s card has an attribute that overpowers the opponent’s, the attack will deal 1.5x damage; meanwhile, 
+                        if the player’s card has an attribute that is overpowered by the opponent’s, the attack will deal 0.5x damage. 
+                        Attacks against the Null or same-attribute arguments will deal 1.0x damage.<br>
+                    </p>
+                </section>
+
+                <section id="deckmech" class="section2">
+                    <h3>Deck Mechanics</h3>
+                    <p class="indent2">
+                        A deck is the set of cards the player will use during debates. The deck consists of two parts: Primary Deck and Support Deck. <br><br>
+
+                        The primary deck is the set of cards that will be used during debates.<br><br>
+
+                        The cards in the support deck help improve the overall stats of the deck, but will not be used during debates. 
+                        Furthermore, select skills in some cards may only be activated by placing the card in the support deck.<br>
+                    </p>
+                </section>
+
+                <section id="sot" class="section2">
+                    <h3>Shadow of Themis</h3>
+                    <p class="indent2">
+                        Tears of Themis is also a game which makes use of a “gacha” system—drawing from a randomized pool of Visions 
+                        (manifested into cards) in return for a certain in-game currency (in this case, Tears of Themis—shortened to “Tears” by the fandom). 
+                        “Shadows of Themis” are what the banners used for pulling are called, each having its own separate pity count depending on its type.<br>
+                    </p>
+
+                    <h4>Tears of Themis</h4>
+                    <p class="indent2">
+                        To pull for one Vision, one Tear is required; going by such logic, one ten-pull will cost 10 Tears. If the player 
+                        lacks the Tears to pull, 180 S-Chips may be converted in order to gain 1 Tear. <br>
+                        
+                        <aside class="note">
+                            <p>Note: To gain S-Chips, Gems may be used (obtained from paying with real money in Mall). However, it is not 
+                            advisable to pre-convert Gems into S-Chips prior to pulling because they may be used to purchase goods from the Mall.</p>
+                        </aside>
+                    </p>
+                    <p class="indent2">
+                        For large-scale events with Event Limited Shadows of Themis, such as Mysteries of the Lost Gold, there are two 
+                        kinds of Tears to be used: Special Tears and Limited Tears. The game normally allows the player to convert S-Chips for 
+                        Special Tears at a discounted rate (1,440 S-Chips for 10 Special Tears) a number of times during the limited banner period. <br>
+
+                        <aside class="note">
+                            <p>Note: After the event, any remaining Limited Tears will be converted into Stellin at a rate of 1:10,000; 
+                                whereas remaining Special Tears will be converted into the regular Tears of Themis at a rate of 1:1.</p>
+                        </aside>
+                    </p>
+                    <p class="indent2">
+                        <br> To summarize: (note that Special Tears change appearance depending on the event)<br>
+
+                        <table id="tears-of-themis">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">Image</th>
+                                <th style="width: 200px;">Type of Tear</th>
+                                <th style="width: 150px;">Period of Use</th>
+                                <th style="width: 300px;">Obtainable Through</th>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/mechanics/vision regular.png"></td>
+                                <td>Tears of Themis (Regular)</td>
+                                <td>All year-round</td>
+                                <td>Converting S-Chips, Codes, Etc</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/mechanics/vision limited.png"></td>
+                                <td>Limited Tears</td>
+                                <td>Limited Banner<br>Period</td>
+                                <td>Side events during/before<br>the limited event period</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/mechanics/vision special.png" width="25%"></td>
+                                <td>Special Tears</td>
+                                <td>Limited Banner<br>Period</td>
+                                <td>Converting S-Chips, event rewards</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <h4>Pity</h4>
+                    <p class="indent2">
+                        The maximum number of draws to guarantee a SSR or SR Vision is called "pity." In all Shadow of Themis banners, 
+                        an SR Vision or higher will appear within 10 pulls while an SSR Vision will appear within 100. 
+                        A display counter for both SSR and SR pity is on each banner, above the Vision draw buttons. <br><br>
+
+                        Once an SR Vision is obtained, the SR pity is restarted. Meanwhile, once an SSR Vision is obtained, 
+                        both the SSR and SR pities are restarted.<br>
+
+                    </p>
+
+                    <h4>Vision History</h4>
+                    <p class="indent2">
+                        A log of Visions drawn for all kinds of banners can be found through 
+                        Profile > Customer Service > Self-Search (Go to the Self-Search page) > Vision Logs. 
+                        Note that only the Visions drawn within the last seven days will be displayed.<br>
+                    </p>
+
+                    <h4>Types of Shadows of Themis</h4>
+                    <image>
+                        <div id="div_imagedescription" class="side_image"><p id="imagedescription2" class="imagedescription"></p></div>
+                        <button id="next2" class="changeimage_next"></button>
+                        <button id="prev2" class="changeimage_prev"></button>
+                        <img id="banners" class="side_image">
+
+                        <script>
+                            var image2 = document.getElementById('banners');
+                            var images2=["../images/mechanics/screenshots/event exclusive banner.jpg", 
+                            "../images/mechanics/screenshots/rate up banner.jpg", 
+                            "../images/mechanics/screenshots/permanent banner.jpg", ]
+                            var description2=["Event Exclusive Banner", "Rotation Banner", "Permanent Banner"]
+                            var order2 = 2;
+                    
+                            image2.src=images2[order2];
+                            document.getElementById('imagedescription2').innerHTML = description2[order2]
+                    
+                            document.getElementById('next2').onclick = function nextImage() {  
+                                order2++;
+                                if (order2 > 2) {
+                                    order2=0;
+                                }
+                                image2.src=images2[order2];
+                                document.getElementById('imagedescription2').innerHTML = description2[order2];
+                            };
+                    
+                            document.getElementById('prev2').onclick = function prevImage() {
+                                order2--;
+                                if (order2 < 0) {
+                                    order2=2;
+                                }
+                                image2.src=images2[order2];
+                                document.getElementById('imagedescription2').innerHTML = description2[order2];
+                            };
+                        </script>
+                    </image>
+
+                    <p class="indent2">
+                        <b>Permanent</b> <br><br>
+
+                        The Permanent Shadow of Themis, also called “permanent banner” by the fandom, is the banner with the largest pool of Visions available; 
+                        and is also the only banner that will remain constant throughout the entire year. <br><br>
+
+                        Though all Visions have the regular probability distribution when not rated-up, the banner contains the exclusive sports-themed SR Visions 
+                        (Luke SR "Moment of Danger," Artem SR "Focus Fire," Vyn SR "Gentleman's Game," and Marius SR "A Dance on the Clouds."). <br>
+                    </p>
+
+                    <p class="indent2">
+                        Probability Distribution
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>2.00%</td>
+                                <td>11.57%</td>
+                                <td>88.47%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability per Vision
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>0.250%</td>
+                                <td>0.615%</td>
+                                <td>2.701%</td>
+                            </tr>
+                        </table>
+
+                        <br>
+                    </p>
+
+                    <p class="indent2">
+                        <b>Rotation</b> <br><br>
+                        The Rotation Shadow of Themis, also called “rotation” by the fandom, is a time-limited rate-up of four Visions 
+                        from an overall pool of 48. It features two rate-up SSR Visions (the only two obtainable SSR’s in the pool) 
+                        and a maximum of two rate-up SR Visions (out of 14 obtainable SR’s). Note that no male lead is featured twice in the 
+                        same rate-up banner. <br>
+                    </p>
+
+                    <p class="indent2">
+                        Probability Distribution
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>1.60%</td>
+                                <td>11.74%</td>
+                                <td>88.66%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability per Vision
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">SSR (rate-up)</th>
+                                <th style="width: 100px;">SR (rate-up)</th>
+                                <th style="width: 100px;">SR</th>
+                                <th style="width: 100px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>0.800%</td>
+                                <td>2.935%</td>
+                                <td>0.489%</td>
+                                <td>2.708%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        SSR pity makes it so that the player will obtain a new rate-up SSR. Should the player have either all or no rate-up SSR owned, 
+                        one random featured SSR is guaranteed within 100 Visions. However, if the player only has one of the 
+                        two rate-up SSR’s in possession, they are guaranteed to draw the other SSR within 100 Visions (it is possible to pull the owned 
+                        SSR multiple times—though this will not reset the SSR pity until the new SSR Vision is obtained). <br><br>
+
+                        This banner makes use of regular Tears of Themis. Furthermore, pity for this banner will carry over to the next rotation. <br><br>
+                    </p>
+
+                    <p class="indent2">
+                        <b>Event Exclusive</b> <br><br>
+                        The Event Exclusive Shadow of Themis, also called “2SSR-2SR banner” by the fandom, is a limited-time rate-up of new 
+                        Visions in a pool of 48. These Visions accompany a medium-scale event, thus the name “Event Exclusive.” 
+                        The mechanics work the same as the rotation banner. <br><br>
+
+                        It is notable that the Visions from this banner may have re-runs in the rotation banner, but will not be 
+                        obtainable through the permanent banner. <br>
+                    </p>
+
+                    <p class="indent2">
+                        Probability Distribution
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>1.60%</td>
+                                <td>11.74%</td>
+                                <td>88.66%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability per Vision
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">SSR (rate-up)</th>
+                                <th style="width: 100px;">SR (rate-up)</th>
+                                <th style="width: 100px;">SR</th>
+                                <th style="width: 100px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>0.800%</td>
+                                <td>3.522%</td>
+                                <td>0.587%</td>
+                                <td>2.708%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        This banner makes use of regular Tears of Themis. Furthermore, pity for this banner will carry over to the subsequent 
+                        Event Exclusive Shadow of Themis (2SSR-2SR banner). <br><br>
+                    </p>
+
+                    <p id="evlim" class="indent2">
+                        <b>Event Limited</b> <br><br>
+                        The Event Limited Shadow of Themis, also called “4SSR banner” by the fandom, is a limited-time rate-up of four new SSR’s, 
+                        where each of the male leads are featured—none of the featured Visions will be obtainable after the event period. 
+                        The banner appears alongside a large-scale event.<br><br>
+
+                        Draw rates for this banner are increased for the new SSR Visions in a round-robin style, in pairs. 
+                        A different pair combination of male lead rate-up will be featured on certain days throughout the event period. 
+                        Days before the event period, Tears of Themis will announce a drawing schedule for players to plan ahead their pulls. <br>
+                    </p>
+
+                    <p class="indent2">
+                        Probability Distribution
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>2.00%</td>
+                                <td>11.57%</td>
+                                <td>86.43%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability per Vision
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">SSR (rate-up)</th>
+                                <th style="width: 100px;">SSR (other)</th>
+                                <th style="width: 100px;">SR</th>
+                                <th style="width: 100px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>0.800%</td>
+                                <td>0.200%</td>
+                                <td>0.826%</td>
+                                <td>2.701%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        This banner makes use of Limited Tears and Special Tears. Furthermore, pity for this banner will NOT carry over to the subsequent 4SSR banner.
+                    </p>
+
+                    <aside id="lostgoldpullsched" class="tweet">
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;A Love Poem to Skadi&quot; Event Shadow of Themis<br>✦ SSR Rate-Up Event Calendar ✦<br><br>From 1/1 11:00 to 1/25 04:00 (UTC+9), 4 event SSR will receive a limited-time rate up! Please refer to the image for the SSR rate-up rotation.<br><br>Event Details: <a href="https://t.co/WGiQscDawL">https://t.co/WGiQscDawL</a><br> <a href="https://twitter.com/hashtag/TearsOfThemis?src=hash&amp;ref_src=twsrc%5Etfw">#TearsOfThemis</a> <a href="https://t.co/HvWiAr6IrD">pic.twitter.com/HvWiAr6IrD</a></p>&mdash; Tears of Themis (@TearsofThemisEN) <a href="https://twitter.com/TearsofThemisEN/status/1476387566353977344?ref_src=twsrc%5Etfw">December 30, 2021</a></blockquote> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </aside>
+
+                    <p id="evlim" class="indent2">
+                        <b>Birthday</b> <br><br>
+                        The Birthday-Limited Shadow of Themis only appears during a male lead’s birthday event. 
+                        It features a rate-up Birthday-limited SSR of the male lead in focus. Two other SSR they feature in, are also present in the pool. <br>
+                    </p>
+
+                    <p class="indent2">
+                        Male Leads' Birthdays
+
+                        <table id="ml_bday">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">ARTEM WING</th>
+                                <th style="width: 100px;">MARIUS VON HAGEN</th>
+                                <th style="width: 100px;">VYN RICHTER</th>
+                                <th style="width: 100px;">LUKE PEARCE</th>
+                            </tr>
+                            <tr>
+                                <td>April 26</td>
+                                <td>June 21</td>
+                                <td>September 27</td>
+                                <td>December 5</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability Distribution
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 75px;">SSR</th>
+                                <th style="width: 75px;">SR</th>
+                                <th style="width: 75px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>1.60%</td>
+                                <td>11.74%</td>
+                                <td>86.66%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Probability per Vision
+
+                        <table id="probability">
+                            <tr class="header" style="background-color: #0c114dc7; color: #f1f1f1">
+                                <th style="width: 100px;">SSR (rate-up)</th>
+                                <th style="width: 100px;">SSR (other)</th>
+                                <th style="width: 100px;">SR</th>
+                                <th style="width: 100px;">R</th>
+                            </tr>
+                            <tr>
+                                <td>1.000%</td>
+                                <td>0.300%</td>
+                                <td>0.838%</td>
+                                <td>2.708%</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="indent2">
+                        Pity for this banner is lessened to 90 draws. The 90th draw will guarantee the birthday exclusive SSR. 
+                        Furthermore, pity count will reset only one the birthday exclusive SSR is drawn, and will carry over to the next birthday banner.<br>
+                    </p>
+                </section>
+
+                <section id="quests" class="section2">
+                    <h3>Quests</h3>
+                    <h4>Daily</h4>
+                        <p class="indent2">
+                            Everyday at 03:00 UTC+8, a new day begins for Tears of Themis. Completing these quests will reward the player EXP (experience points) 
+                            and Activeness (which will manifest into rewards).<br><br>
+
+                            Completing all daily quests and reaching all thresholds of Activeness rewards a total of 6700 EXP per day. <br><br>
+
+                            On another note, daily sign-in rewards players for logging into the game for the day. The quantity of the rewards received can vary; 
+                            there is an element of luck each day the player logs in, indicated by DAVIS' graphic on the login display.<br><br>
+
+                            If DAVIS is:
+                            <ul class="indent 2" style="margin-top:-10px;">
+                                <li>Seated - player receives the base reward</li>
+                                <li>Standing - reward increases by 50%</li>
+                                <li>Cheering with flowers - reward doubles (note the reward always doubles on Day 26)</li>
+                            </ul>
+                        </p>
+                        <p class="indent2">
+                            If the player purchased the monthly card, then the log-in rewards will be claimed through daily check-in.<br><br>
+                        </p>
+
+                        <h4>Weekly</h4>
+                        <p class="indent2">
+                            After completing Main Story 4-18, Weekly Quests are unlocked. These are quests that reset weekly on Monday 03:00 UTC+8 UTC+8. 
+                            Just like the daily quests, completing weekly quests will reward the player EXP and Activeness.<br>
+                        </p>
+
+                        <h4>Achievements</h4>
+                        <p class="indent2">
+                            As the player progresses through the game, they complete achievements and earn rewards such as S-Chips or character level-up material. <br>
+                        </p>
+
+                        <div class="imagerow">
+                            <img src ="../images/mechanics/screenshots/daily sign in.jpg">
+                            <img src="../images/mechanics/screenshots/daily quests.jpg">
+                            <img src="../images/mechanics/screenshots/weekly quest.jpg">
+                            <img src="../images/mechanics/screenshots/achievement.jpg">
+                        </div>
+                </section>
+
+                <section id="mall" class="section2">
+                    <h3>Mall</h3>
+                    <p class="indent2">
+                        The in-game Mall is where players may purchase packs using real or in-game currency, depending on the product.<br>
+                    </p>
+
+                    <h4>Gems</h4>
+                    <p class="indent2">
+                        This section of the Mall allows players to purchase Gems, Monthly Card, and the Investment Fund using real currency. 
+                        For every 1 USD spent, the player garners 6 P-Points.<br><br>
+ 
+                        <b>Monthly Card</b> <br><br>
+                        The monthly card is a $4.99 USD (249.00 PHP) purchase  lasting 30 days per purchase.<br><br>
+
+                        <b>Investment Fund</b> <br><br>
+                        The Investment Fund is a $9.99 USD (499.00 PHP) pack that gives S-Chips when a player reaches a certain player level. 
+                        The pack is retroactive: if a player purchases the pack when they are a higher level, they will also receive the 
+                        rewards unlocked from lower levels.<br><br>
+                    
+                        <b>Total Purchases</b> <br><br>
+                        Players can receive rewards from purchasing items that give P-Points. 1 USD is roughly equivalent to 6 P-Points. 
+                        On accumulating a certain amount of P-Points, two Visions may be redeemed—an SR after reaching the threshold of 600 (Artem "Thin Veil") 
+                        and an SSR at 5,000 (Marius "Matching Tattoos").<br><br>
+                    </p>
+
+                    <div class="imagerow">
+                        <img src ="../images/mechanics/screenshots/gems.jpg">
+                        <img src ="../images/mechanics/screenshots/monthly card.jpg">
+                        <img src="../images/mechanics/screenshots/monthly card reward.jpg">
+                        <img src="../images/mechanics/screenshots/invesent fund.jpg">
+                        <img src="../images/mechanics/screenshots/total purchase.jpg">
+                    </div>
+
+                    <h4>Packs</h4>
+                    <p class="indent2">
+                        This section of the Mall allows players to purchase Gems, Monthly Card, and the Investment Fund using real currency. 
+                        For every 1 USD spent, the player garners 6 P-Points.<br><br>
+ 
+                        <b>Permanent</b> <br><br>
+                        As mentioned in the name, permanent packs are purchasable all year-round using either Gems or real currency.<br><br>
+
+                        <b>Time-Limited</b> <br><br>
+                        The following packs are only available for a limited time, typically noted with a red timer banner at the top-left of the pack banner. 
+                        These packs usually offer discounted prices than normal, usually appearing alongside events.<br><br>
+
+                        <b>Event</b> <br><br>
+                        These are event-related packs available only during the event period.<br><br>
+                    </p>
+
+                    <h4>Exchange</h4>
+                    <p class="indent2">
+                        Where the player can exchange the currency they get from other game modes.<br><br>
+                    </p>
+                </section>   
+            </section>
+
+            <hr class="hr1">
+
+            <section id="gamemodes" class="section1">
+                <h2>GAME MODES</h2>
+
+                <section id="mainstory" class="section2">
+                    <h3 class="content">Main Story</h3>
+                    <image>
+                        <img src="../images/mechanics/screenshots/main story.jpg" id="mainstory_img">
+                    </image>
+                    <aside id="mainstory_trailer">
+                        <p class="indent2">
+                            <i>Stellis, a city that rose from the clash of civilizations. Modern tech has given it its radiant neon lights 
+                                but also cast long shadows of obscurity. Lately, there has been an abnormal increase in the number of mental 
+                                illness cases as well as incidents that threaten Stellis' social security.<br><br>
+
+                                Many gentle and good people of Stellis have somehow grown violent and volatile. These incidents may have been recorded, 
+                                but they are often drowned out in a flood of data. Yet someone took notice of them and compiled them for detailed analysis...<br><br>
+
+                                Codenamed "X-NOTE", the project aims to peel away layers of obscuring data and reveal the hidden truth beneath. 
+                                When all is put on the scales of the law before Lady Justice, you will be the one to weigh their crimes in the balance.</i><br>
+                            <p class="indent">—Tears of Themis Official Website</p>
+                        </p>
+                    </aside>
+
+                    <p class="indent2">
+                        This is the main game mode wherein most of the plot of the game will take place. There are many different game 
+                        mechanics for the main story, other than the battle stages.<br><br>
+
+                        Story stages include dialogues with the different male leads and NPC’s, interrogation portions, 3D investigation, 
+                        and cross-examination of discovered evidence.<br><br>
+
+                        To conclude the main story chapter, the player attends a “court trial” and presents the evidence they have 
+                        gathered to defend their client. At the end of the trial, the player battles the opposing body one last 
+                        time before the stage is completed. <br><br>
+
+                        Each debate stage when completed for the first time will provide the player with 40 S-Chips.<br>
+                    </p>
+                    
+                </section>
+
+                <section id="anomaly" class="section2">
+                    <h3>Anomaly Levels</h3>
+                    <p class="indent2">
+                        Anomaly Levels are harder versions of the Main Story debate stages. The drops also differ per stage as they can drop:<br>
+                        
+                        <ul class="indent 2" style="margin-top:-10px;">
+                            <li>Character Chips</li>
+                            <li>Skill Up items</li>
+                            <li>SR Card Fragments</li>
+                        </ul>
+                    </p>
+                    <p class="indent2">
+                        Each debate stage when completed for the first time will provide the player with 40 S-Chips.<br><br>
+                    </p>
+                </section>
+
+                <section id="legalstu" class="section2">
+                    <h3>Legal Studies</h3>
+                    <p class="indent2">
+                        This is the game mode where the player goes through various debate stages to gain card level up and evolution material.<br><br>
+
+                        Each debate stage when completed for the first time will provide the player with 40 S-Chips.<br>
+                    </p>
+                </section>
+
+                <section id="trials" class="section2">
+                    <image>
+                        <img src="../images/mechanics/screenshots/trials of themis.jpg" id="trials_img">
+                    </image>
+                    <h3>Trials of Themis</h3>
+                    <p class="indent2">
+                        Similar to the anomaly stages, players battle in these stages to gain a hefty amount of S-Chips 
+                        (amount depending how far the player is in this game mode). The difficulty of the debates increase the 
+                        farther the player progresses in the 8-bit art styled game mode. Furthermore, playing through Trials of Themis 
+                        will also unlock various difficulties for Temple of Trials<br><br>
+                    
+                        Unlike regular game modes, each level consists of two parts: a debate stage and a rewards portion.<br>
+                    </p>
+
+                    <h4>Debate Stage</h4>
+                        <p class="indent2">
+                            This has the same mechanics as all the other debates in the other game modes. Defeating the opponent in 
+                            this stage will reward the player with S-Chips, as mentioned before.<br>
+                        </p>
+
+                    <h4>Rewards Portion</h4>
+                    <p class="indent2">
+                        To gain extra rewards, the player will choose one among three possible options.These chests may contain Stellin x1400, 
+                        Oracle of Justice II x6, or a Trials of Athena chest.<br><br>
+                    
+                        Trials of Athena Chests are small trivia quizzes that, when answered correctly, will reward the player with both 
+                        Stellin and Oracle of Justice II. Otherwise, the player will receive no reward from this stage.<br>
+                    </p>
+                </section>
+
+                <section id="temple" class="section2">
+                    <h3>Temple of Trials</h3>
+                    <p class="indent2">
+                        Temple of Trials is an extended version of Trials of Themis. For 30 AP, instead of 2 waves, Temple of Trials consists of 30 waves. 
+                        The potential rewards for each wave consist of:<br>
+                        
+                        <ul class="indent 2" style="margin-top:-10px;">
+                            <li>Treasure - Varies depending on Temple of Trials difficulty</li>
+                            <li>Debate Stage - Grants S-Chip upon winning</li>
+                            <li>Power Up - Boosts the strength of the player's cards for rest of the run</li>
+                        </ul>
+                    </p>
+
+                    <p class="indent2">
+                        When auto-debating, the AI will go straight through the middle by default unless moving to encounter a debate stage.<br>
+                    </p>
+
+                    <aside class="note">
+                        <p>Note: There exists a limit to the amount of S-Chips to be obtained per week depending on how far the player has 
+                            progressed in Trials of Themis. The counter resets every Monday, 03:00 UTC+8.</p>
+                    </aside>
+                </section>
+
+                <section id="visit" class="section2">
+                    <h3>Character Visit</h3>
+                    <p class="indent2">
+                        The player can choose to “visit” one of the love interests to interact with him and increase his affection level. 
+                        As the love interests’ affection levels increase, more interactions with them are increased. This function is not 
+                        available automatically at the start of the game—the love interests are complete in the Character Visit screen 
+                        when the player has completed Main Story Chapter 4.<br>
+                    </p>
+
+                    <h4>Chat</h4>
+                    <p class="indent2">
+                        This is one way to raise the affection level with the chosen love interest. The player taps on the character to interact with them; 
+                        alongside playing games with them, such as rock-paper-scissors or Old Maid. Their reactions and dialogues change depending on 
+                        where you tap them and how high your affection level is.<br>
+                    </p>
+
+                    <h4>Character Story</h4>
+                    <p class="indent2">
+                        Character Stories are stages and stories dedicated to each love interest. In a sense, the character stories 
+                        are the individual “routes” of the love interests, helping the player get to know the characters and their backstory more. 
+                        HOWEVER, to clear debate stages, only the cards featuring the character chosen must be used.<br><br>
+
+                        Each debate stage when completed for the first time will provide the player with 40 S-Chips.<br>
+                    </p>
+
+                    <div class="imagerow">
+                        <img src ="../images/mechanics/screenshots/chara visit map.jpg">
+                        <img src ="../images/mechanics/screenshots/chat screen.jpg">
+                        <img src="../images/mechanics/screenshots/character story.jpg">
+                    </div>
+                </section>
+
+                <section id="fieldwork" class="section2">
+                    <image>
+                        <img src="../images/mechanics/screenshots/fieldwork.jpg" id="fieldwork_img">
+                    </image>
+
+                    <h3>Fieldwork</h3>
+                    <p class="indent2">
+                        Fieldwork is unlocked after completion of Main Story 04-18.<br>
+                    </p>
+
+                    <h4>Introduction</h4>
+                        <p class="indent2">
+                            When the player first enters the fieldwork screen, DAVIS will conduct a tutorial for the player to understand the game mode. <br><br>
+
+                            There are two categories of Fieldwork:
+                            <ol class="indent 2">
+                                <li>Legal Aid</li>
+                                <ul>
+                                    <li>Permanently open</li>
+                                    <li>Players use AP to conduct debates in any district of their choice to earn ‘Reputation’ for the respective district</li>
+                                </ul>
+                                <li>Special Consultation</li>
+                                <ul>
+                                    <li>Open for a limited time, during special events (i.e. MR events)</li>
+                                </ul>
+                            </ol>
+                        </p>
+
+                        <h4>Legal Aid</h4>
+                        <p class="indent2">
+                            There are four districts, each associated with a male lead, indicative of where they live:
+                            <ul class="indent 2">
+                                <li>Waterfront (Artem Wing) </li>
+                                <li>Orchidshine (Marius von Hagen)</li>
+                                <li>Long Beach (Vyn Richter)</li>
+                                <li>South Stellis (Luke Pearce)</li>
+                            </ul>
+                        </p>
+
+                        <p class="indent2">
+                            Handle cases in each district to increase Reputation in the corresponding district. Each of the four districts 
+                            has its own independent Reputation Rating. Increase Reputation for each region to earn rewards. A new currency, 
+                            Case Report, can also be earned and used to exchange for rewards in the Mall.<br><br>
+
+                            This game mode utilizes a Fatigue system shared between districts. Fatigue is capped at 50 and will reset 
+                            every day at 03:00 UTC+8. Players may use 60 S-Chips to temporarily increase Fatigue cap by 20 for the day (limit twice per day). <br>
+                        </p>
+
+                        <h4>Special Consultation</h4>
+                        <p class="indent2">
+                            The Special Consultation functions almost the same as Legal Aid, with only minimal changes.<br><br>
+                        </p>
+                </section>
+            </section>
+
+            <hr class="hr1">
+
+            <section id="gamedata" class="section1">
+                <h2>GAME DATA</h2>
+
+                <section id="cards" class="section2">
+                    <image>
+                        <div id="div_imagedescription" class="imagedescriptionholder3"><p id="imagedescription3" class="imagedescription"></p></div>
+                        <button id="next3" class="changeimage_next"></button>
+                        <button id="prev3" class="changeimage_prev"></button>
+                        <img id="cards_img" class="side_image">
+
+                        <script>
+                            var image3 = document.getElementById('cards_img');
+                            var images3=["../images/mechanics/screenshots/cards.jpg", 
+                            "../images/mechanics/screenshots/card.jpg", 
+                            "../images/mechanics/screenshots/card tut.jpg", ]
+                            var description3=["Card Screen", "Card Close-Up", "In-Game Card Tutorial"]
+                            var order3 = 0;
+                    
+                            image3.src=images3[order3];
+                            document.getElementById('imagedescription3').innerHTML = description3[order3]
+                    
+                            document.getElementById('next3').onclick = function nextImage() {  
+                                order3++;
+                                if (order3 > 2) {
+                                    order3=0;
+                                }
+                                image3.src=images3[order3];
+                                document.getElementById('imagedescription3').innerHTML = description3[order3];
+                            };
+                    
+                            document.getElementById('prev3').onclick = function prevImage() {
+                                order3--;
+                                if (order3 < 0) {
+                                    order3=2;
+                                }
+                                image3.src=images3[order3];
+                                document.getElementById('imagedescription3').innerHTML = description3[order3];
+                            };
+                        </script>
+                    </image>
+
+                    <h3 class="content" style="margin-top: 40px;">Cards</h3>
+                    <p class="indent2">
+                        Cards are the main "units" and collectibles in the game. Each card features a unique illustration of the respective love interest. 
+                        They are the core part of deck building and have various mechanics.<br>
+                    </p>
+
+                    <h4>Stats</h4>
+                    <p class="indent2">
+                        Every card has three sets of stats:
+                        <ul class="indent 2">
+                            <li>Influence: The attack stat of the card.</li>
+                            <li>Defense: The defense stat of the card.</li>
+                            <li>Power: Indicates the card's total strength based on its level, upgrade tier, and evolution tier.</li>
+                        </ul>
+                    </p>
+
+                    <h4>Attribute</h4>
+                    <p class="indent2">
+                        See: <a href="#gamemech"><i>gamemech</i></a><br>
+                    </p>
+
+                    <h4>Rarity</h4>
+                    <p class="indent2">
+                        The rarity of cards also contributes to the overall power of the cards. The rarer a card may be, the stronger it is. 
+                        The rarity levels are as follows: SSR > SR > MR > R. <br><br>
+
+                        On another note, the only card rarity with non-animated illustrations are R cards. Whereas, SSR Cards are the only 
+                        cards that display a short animation upon attainment.<br>
+                    </p>
+
+                    <h4>Enhancement</h4>
+                    <p class="indent2">
+                        Oracle of Justice and Stellin can be used to level up cards to increase their stats. The amount of Oracle of 
+                        Justice and Stellin required increases based on rarity and level.<br>
+                    </p>
+
+                    <h4>Evolution</h4>
+                    <p class="indent2">
+                        A player can evolve a card at Level 40, and for SR/SSR cards, Level 70 as well. Evolving a card increases a 
+                        card's level cap from 40 to 70, and then 70 to 100. New skills will also be unlocked when evolving. <br><br>
+
+                        In addition, the card’s illustration will also change when evolving. For SR/SSR cards, the first evolution 
+                        will slightly change the card art, while the second evolution will have more visible changes. <br>
+                    </p>
+
+                    <h4>Upgrading</h4>
+                    <p class="indent2">
+                        When a player obtains a duplicate of a card, they will receive card fragments that can be used to upgrade a 
+                        card to increase a card's Influence and Defense up to 4 times. This means a player can pull a card a maximum of 
+                        5 times - the initial pull and four more times after - to completely max upgrade a card.<br>
+                    </p>
+
+                    <h4>Skill</h4>
+                    <p class="indent2">
+                        Card skills can be passive skills that automatically activate at battle start, or active skills which activate when a card is used. 
+                        The majority of card skills affect Influence (Attack) or Defense, such as increasing a player's own Influence/Defense, 
+                        dealing more damage to the enemy’s argument, or lowering an enemy's Influence/Defense.<br><br>
+
+                        To learn more, a tutorial made by Twitter user @MOYlSHENG is available: <br>
+
+                        <aside id="skill_guide" class="tweet">
+                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">a detailed thread explaining the card skills and how to prioritise + use them effectively!! can qrt with questions if any<a href="https://twitter.com/hashtag/TearsofThemis?src=hash&amp;ref_src=twsrc%5Etfw">#TearsofThemis</a> <a href="https://twitter.com/hashtag/%E6%9C%AA%E5%AE%9A%E4%BA%8B%E4%BB%B6%E7%B0%BF?src=hash&amp;ref_src=twsrc%5Etfw">#未定事件簿</a> <a href="https://t.co/JaYYznbrcr">pic.twitter.com/JaYYznbrcr</a></p>&mdash; ten ✧ 莫夫人 ; semi ia (@MOYlSHENG) <a href="https://twitter.com/MOYlSHENG/status/1424956552289554435?ref_src=twsrc%5Etfw">August 10, 2021</a></blockquote> 
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </aside>
+                    </p>
+
+                    <h4>Story</h4>
+                    <p class="indent2">
+                        Card stories are unlocked when a player reaches certain level thresholds for the card. These card stories 
+                        consist of dates and situations with the MC and the featured male lead in the card.<br><br>
+
+                        Completing these card stories will also reward S-Chips and increase the Affection level with the character, 
+                        which can be claimed when selecting the gift icon on the card from the Card Details screen. <br><br>
+                    </p>
+                </section>
+
+                <section id="nxx" class="section2">
+                    <image>
+                        <div id="div_imagedescription" class="side_image"><p id="imagedescription4" class="imagedescription"></p></div>
+                        <button id="next4" class="changeimage_next"></button>
+                        <button id="prev4" class="changeimage_prev"></button>
+                        <img id="nxx_images" class="side_image">
+
+                        <script>
+                            var image4 = document.getElementById('nxx_images');
+                            var images4=["../images/mechanics/screenshots/nxx hq.jpg", 
+                            "../images/mechanics/screenshots/hq level.jpg", 
+                            "../images/mechanics/screenshots/resource tut.jpg", 
+                            "../images/mechanics/screenshots/case analysis tut.jpg", 
+                            "../images/mechanics/screenshots/study room tut.jpg"]
+                            var description4=["NXX Headquarters", 
+                            "In-Game HQ Tutorial", 
+                            "In-Game Resource Requisition Tutorial", 
+                            "In-Game File Room Tutorial", 
+                            "In-Game Study Room Tutorial",]
+                            var order4 = 0;
+                    
+                            image4.src=images4[order4];
+                            document.getElementById('imagedescription4').innerHTML = description4[order4]
+                    
+                            document.getElementById('next4').onclick = function nextImage() {  
+                                order4++;
+                                if (order4 > 4) {
+                                    order4=0;
+                                }
+                                image4.src=images4[order4];
+                                document.getElementById('imagedescription4').innerHTML = description4[order4];
+                            };
+                    
+                            document.getElementById('prev4').onclick = function prevImage() {
+                                order4--;
+                                if (order4 < 0) {
+                                    order4=4;
+                                }
+                                image4.src=images4[order4];
+                                document.getElementById('imagedescription4').innerHTML = description4[order4];
+                            };
+                        </script>
+                    </image>
+
+                    <h3 style="margin-top: -20px;">NXX Headquarters</h3>
+                        <p class="indent2">
+                            NXX Headquarters is unlocked after Main Story 04-02.<br><br>
+
+                            This includes many functions such as Headquarters Level, Resource Requisition, File Room, and Study Room.<br><br>
+
+                            To learn more about Study Room, here is another tutorial made by Twitter user @MOYlSHENG:<br>
+
+                            <aside id="fileroom_guide" class="tweet">
+                                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">upgrading the study room in the NXX HQ: a thread<a href="https://twitter.com/hashtag/TearsOfThemis?src=hash&amp;ref_src=twsrc%5Etfw">#TearsOfThemis</a> <a href="https://twitter.com/hashtag/%E6%9C%AA%E5%AE%9A%E4%BA%8B%E4%BB%B6%E7%B0%BF?src=hash&amp;ref_src=twsrc%5Etfw">#未定事件簿</a> <a href="https://t.co/aQ7GFxDt7F">pic.twitter.com/aQ7GFxDt7F</a></p>&mdash; ten ✧ 莫夫人 ; semi ia (@MOYlSHENG) <a href="https://twitter.com/MOYlSHENG/status/1430534395597787143?ref_src=twsrc%5Etfw">August 25, 2021</a></blockquote> 
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </aside>
+                        </p>
+
+                        <p class="indent2">
+                            Included in the Headquarters, the Lounge function is available.<br><br>
+
+                            Here, chibi versions of the love interest will appear alongside furniture the player has obtained. 
+                            Note that furniture may only be placed down per set, and special sets are obtainable during events.<br>
+                            
+                            <div class="imagerow">
+                                <img src ="../images/mechanics/screenshots/lounge normal.jpg">
+                                <img src ="../images/mechanics/screenshots/lounge event.jpg">
+                                <img src="../images/mechanics/screenshots/lounge tut.jpg">
+                            </div>
+                        </p>
+                </section>
+
+                <section id="charaprof" class="section2">
+                    <h3 style="margin-top: 40px; margin-bottom: -20px;">Character Profile</h3>
+                    <image>
+                        <img src="../images/mechanics/screenshots/chara profile.jpg" id="charaprofile_img">
+                    </image>
+                    <p class="indent2">
+                        Character Profiles are used to display the player’s account data and flaunt their in-game possessions. <br>
+                    </p>
+
+                    <h4>Invitations</h4>
+                    <p class="indent2">
+                        As players progress through the story, they will unlock new Invitations. When selected from the profile, 
+                        they not only change the player's profile header, but also the player's default home screen.<br>
+                    </p>
+
+                    <h4>Badges</h4>
+                    <p class="indent2">
+                        Badges are a cosmetic feature. Players can select badges they've earned to display on their profile.<br>
+                    </p>
+
+                    <h4>Namecards</h4>
+                    <p class="indent2">
+                        Same with badges, namecards are cosmetic features. <br><br>
+
+                        Invitations, badges, and namecards are obtainable through events or Fieldwork (Legal Aid).<br>
+                    </p>
+                </section>
+            </section>
+        </section>
+
+        <footer id="footer">
+            <div id="references">
+                <p>REFERENCES (scroll for more)</p>
+                <ul class="indent">
+                    <li>miHoYo. (n.d.). <a href = "https://tot.mihoyo.com/en-us/" target="_blank">Tears of Themis Official Website.</a></li>
+                    <li>2020. <a href="https://play.google.com/store/apps/details?id=com.miHoYo.tot.glb" target="_blank"><i>Tears of Themis</i></a>. miHoYo. (i.e. Big Data Lab)</li>
+                    <li>Partleton, K. (n.d.). <a href = "https://www.pockettactics.com/tears-of-themis/cards" target="_blank">Tears of Themis cards – empathy, logic, and intuition</a> Pocket Tactics.</li>
+                    <li>Si, N. (2022, January 3). <a href = "https://progameguides.com/tears-of-themis/how-do-limited-tears-work-in-tears-of-themis/" target="_blank">How do Limited Tears work in Tears of Themis</a> Pro Game Guides.</li>
+                    <li>Tears of Temis Wiki Development Team. (n.d.). <a href = "https://tearsofthemis.miraheze.org/wiki/Tears_of_Themis_Wiki" target="_blank">Tears of Temis Wiki.</a></li>
+                    <li>miHoYo. (n.d.). <a href = "https://tot.hoyoverse.com/en-us/story" target="_blank">Tears of Themis Official Website (Story).</a></li>
+                    <li>Oona Tempest「ウーナ」. (2021, August 7).   <a href = "https://sweetnspicyreviews.com/2021/08/07/tears-of-themis-full-release-game-review-beginners-guide/" target="_blank">EARS OF THEMIS | FULL RELEASE | GAME REVIEW & BEGINNER’S GUIDE.</a> Sweet & Spicy Otome Game Reviews.</li>
+                </ul>
+            </div>
+            <p>Copyright © 2020 miHoYo All Rights Reserved</p>
+
+            <aside id="socmeds">
+                <div id="twt">
+                    <a href="https://twitter.com/TearsofThemisEN" target="_blank"></a>
+                </div>
+
+                <div id="fb">
+                    <a href="https://www.facebook.com/tearsofthemis.glb/" target="_blank"></a>
+                </div>
+
+                <div id="yt">
+                    <a href="https://www.youtube.com/channel/UCsH_thMW9_3rau-K8v4yAxw" target="_blank"></a>
+                </div>
+			</aside>
+        </footer>
+	</body>
+</html>

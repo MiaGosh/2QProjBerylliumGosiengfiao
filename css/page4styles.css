@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+			
+    * {
+        font-family: Lato;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: rotateX(-10deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    body {
+        margin: 0;
+        color: #2F3362;
+        overflow-x: hidden;
+        background-color:hsla(207, 17%, 90%, 0.849);
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        padding-left: 20px;
+    }
+    
+    p {
+        padding-left: 20px;
+    }
+
+    .indent {
+        padding-left: 100px;
+    }
+
+    .indent2 {
+        padding-left: 30px;
+    }
+
+    .hr1 {
+        width: 97%;
+        margin: auto;
+    }
+
+    nav {
+        background-color: #2F3362;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    nav > a {
+        float: left;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    nav > a:hover
+    {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    #charanav {
+        float: left;
+    }
+
+    #charanav > a {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    #charanav > a:hover {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    .charanav-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 3;
+    }
+
+    .charanav-content > a{
+        color: #0c114d;
+        padding: 5px 8px;
+        display: block;
+    }
+
+    .charanav-content > a:hover{
+        background-color: #e2e2e2
+    }
+
+    #charanav:hover .charanav-content {
+        display: block;
+    }
+
+    #toc {
+        float: right;
+        font-size: 12px;
+        background-color: #f1f1f1;
+        border: #0c114d 1px solid;
+        border-radius: 10px;
+        margin-top: 80px;
+        margin-left: 15px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        width: 250px;
+        color: #0c114d;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #toc > ul  {
+        list-style: none;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #toc > ul > li {
+        padding: 5px;
+    }
+
+    #toc > ul > li:hover {
+        background-color: #e2e2e2;
+    }
+
+    #toc > ul > li > a {
+        color: #0c114d;
+    }
+
+    #toc > ul > li.indent2 > a {
+        color: #0c114d;
+        padding-left: 30px;
+    }
+
+    #toc > ul > li > a:visited {
+        color: #0c114d;
+    }
+
+    #events {
+        background-color: hsla(205, 46%, 95%, 0.767);
+        max-width: 80%;
+        padding-bottom: 170px;
+        padding-top: 60px;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #footer {
+        color: hsla(34, 9%, 85%, 0.965);
+        background-color: #3c406b;
+        overflow: hidden;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        font-size: 10px;
+        padding-top: 10px;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #references {
+        height: 90px;
+        overflow: auto;
+    }
+
+    #references::-webkit-scrollbar {
+        display: none;
+    }
+
+    #references > p {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: -8px;
+    }
+
+    #references > ul > li {
+        font-size: 15px;
+    }
+
+    #references > ul > li > a{
+        color: hsla(34, 9%, 85%, 0.965);
+        font-style: italic;
+    }
+
+    #references > ul > li > a:visited {
+        color: hsla(34, 9%, 85%, 0.965);
+    }
+
+    #socmeds {
+        float: right;
+        margin-top: -25px;
+        margin-right: 10px;
+    }
+
+    #twt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #twt > a {
+        background: url('../images/socmed icons.png') no-repeat 0 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #twt > a:hover {
+        opacity: 1;
+    }
+
+    #fb {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #fb > a {
+        background: url('../images/socmed icons.png') no-repeat -23px 0 ;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #fb > a:hover {
+        opacity: 1;
+    }
+
+    #yt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #yt > a {
+        background: url('../images/socmed icons.png') no-repeat -46px 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #yt > a:hover {
+        opacity: 1;
+    }

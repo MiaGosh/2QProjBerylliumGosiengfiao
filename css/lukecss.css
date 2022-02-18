@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+			
+    * {
+        font-family: Lato;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: rotateX(-10deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    body {
+        margin: 0;
+        color: #2F3362;
+        overflow-x: hidden;
+        background-color:hsla(205, 46%, 95%, 0.767);
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        padding-left: 20px;
+    }
+    
+    p {
+        padding-left: 20px;
+    }
+
+    .indent {
+        padding-left: 100px;
+    }
+
+    .indent2 {
+        padding-left: 30px;
+    }
+
+    nav {
+        background-color: #2F3362;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    nav > a {
+        float: left;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    nav > a:hover
+    {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    #charanav {
+        float: left;
+    }
+
+    #charanav > a {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding: 13px 18px;
+        margin: 3px;
+        font-size: 18px;
+        color: hsla(34, 9%, 85%, 0.965);
+        transition: 0.1s;
+    }
+
+    #charanav > a:hover {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 17px;
+    }
+
+    .charanav-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 3;
+    }
+
+    .charanav-content > a{
+        color: #0c114d;
+        padding: 5px 8px;
+        display: block;
+    }
+
+    .charanav-content > a:hover{
+        background-color: #e2e2e2
+    }
+
+    #charanav:hover .charanav-content {
+        display: block;
+    }
+
+    hr.hr1 {
+        position: relative;
+        width: 97%;
+        margin: auto;
+    }
+
+    #lovein {
+        width: 90%;
+        margin-top: 120px;
+        margin-right: 90px;
+        margin-left: 90px;   
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #lovein > h2 {
+        text-align: center;
+        font-style:italic;
+        font-weight:bold;
+        margin-left: -20px;
+        margin-bottom: 50px;
+    }
+
+    #lovein > div {
+        float: left;
+        margin-bottom: 50px;
+    }
+
+    div.artem {
+        position: relative;
+        padding-right: 50px;
+    }
+
+    div.artem > a {
+        background: url('../images/artem.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px 0px #862E26;
+        transition: 0.3s;
+    }
+
+    div.artem > a:hover {
+        background: url('../images/artem hover.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 9px 18px 0px #862E26;
+    }
+
+    div.luke {
+        position: relative;
+        padding-right: 50px;
+    }
+
+    div.luke > a {
+        background: url('../images/luke.png') no-repeat ;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px 0px #E8B569;
+        transition: 0.3s;
+    }
+
+    div.luke > a:hover {
+        background: url('../images/luke hover.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 9px 18px 0px #E8B569;
+    }
+
+    div.marius {
+        position: relative;
+        padding-right: 50px;
+    }
+
+    div.marius > a {
+        background: url('../images/marius.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px 0px #9191B8;
+        transition: 0.3s;
+    }
+
+    div.marius > a:hover {
+        background: url('../images/marius hover.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 9px 18px 0px #9191B8;
+    }
+
+    div.vyn {
+        position: relative;
+    }
+
+    div.vyn > a {
+        background: url('../images/vyn.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 8px 16px 0px #A3B453;
+        transition: 0.3s;
+    }
+
+    div.vyn > a:hover {
+        background: url('../images/vyn hover.png') no-repeat;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        box-shadow: 0px 9px 18px 0px #A3B453;
+    }
+
+    #npc {
+        margin: 100px 50px 150px 80px;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+        
+    }
+
+    #npc > h2 {
+        text-align: center;
+        font-style:italic;
+        font-weight:bold;
+        margin-left: -20px;
+        margin-bottom: 50px;
+    }
+
+    #npc > div {
+        float: left;
+        padding-bottom: 150px;
+    }
+
+    div.darius {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    div.darius > a{
+        background: url('../images/darius.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    div.darius > a:hover{
+        background: url('../images/darius hover.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    div.celestine {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    div.celestine > a{
+        background: url('../images/celestine.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    div.celestine > a:hover{
+        background: url('../images/celestine hover.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    div.mc {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    div.mc > a{
+        background: url('../images/mc.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    div.mc > a:hover{
+        background: url('../images/mc hover.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    div.kiki {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    div.kiki > a{
+        background: url('../images/kiki.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    div.kiki > a:hover{
+        background: url('../images/kiki hover.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    div.davis {
+        position: relative;
+    }
+
+    div.davis > a{
+        background: url('../images/davis.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    div.davis > a:hover{
+        background: url('../images/davis hover.png') no-repeat;
+        width: 250px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    #footer {
+        color: hsla(34, 9%, 85%, 0.965);
+        background-color: #3c406b;
+        overflow: hidden;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        font-size: 10px;
+        padding-top: 10px;
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #references {
+        height: 90px;
+        overflow: auto;
+    }
+
+    #references::-webkit-scrollbar {
+        display: none;
+    }
+
+    #references > p {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: -8px;
+    }
+
+    #references > ul > li {
+        font-size: 15px;
+    }
+
+    #references > ul > li > a{
+        color: hsla(34, 9%, 85%, 0.965);
+        font-style: italic;
+    }
+
+    #references > ul > li > a:visited {
+        color: hsla(34, 9%, 85%, 0.965);
+    }
+
+    #socmeds {
+        float: right;
+        margin-top: -25px;
+        margin-right: 10px;
+    }
+
+    #twt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #twt > a {
+        background: url('../images/socmed icons.png') no-repeat 0 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #twt > a:hover {
+        opacity: 1;
+    }
+
+    #fb {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #fb > a {
+        background: url('../images/socmed icons.png') no-repeat -23px 0 ;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #fb > a:hover {
+        opacity: 1;
+    }
+
+    #yt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #yt > a {
+        background: url('../images/socmed icons.png') no-repeat -46px 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #yt > a:hover {
+        opacity: 1;
+    }

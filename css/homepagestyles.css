@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+			
+	* {
+        font-family: Lato;
+		color: hsla(34, 9%, 85%, 0.965);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+			
+	body {
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+
+    #video {
+        transform: translate(0,0);
+        object-fit: cover;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        max-height: 100%;
+      }
+
+
+	#mainbox {
+		background-color: #2f3362c4;
+		height: 250px;
+		width: 60%;
+        border-radius: 20px;
+        padding: 20px;
+        
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    @keyframes pulse {
+        0% {color: hsla(33, 44%, 88%, 0.712);}
+        50% {color: hsl(30, 100%, 98%);}
+        100% {color: hsla(33, 44%, 88%, 0.712);}
+    }
+    
+    #mainbox > h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: 50px;
+        animation-name: pulse;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    
+    #mainbox > p {
+        text-align: center;
+        position: relative;
+        top: 50px;
+        font-size: 15px;
+    }
+
+    #mainbox > p > a {
+        text-decoration: none;
+        padding: 4px;
+        margin: 3px;
+        transition: 0.1s;
+    }
+
+    #mainbox > p > a:hover
+    {
+        color: hsla(34, 9%, 85%, 0.767);
+        font-size: 14px;
+    }
+
+    #socmeds {
+        position: fixed;
+        top: 85%;
+        left: 45%; 
+    }
+
+    #twt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #twt > a {
+        background: url('../images/socmed icons.png') no-repeat 0 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #twt > a:hover {
+        opacity: 1;
+    }
+
+    #fb {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #fb > a {
+        background: url('../images/socmed icons.png') no-repeat -23px 0 ;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #fb > a:hover {
+        opacity: 1;
+    }
+
+    #yt {
+        float: left;
+        padding-right: 5px;
+    }
+
+    #yt > a {
+        background: url('../images/socmed icons.png') no-repeat -46px 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    #yt > a:hover {
+        opacity: 1;
+    }
