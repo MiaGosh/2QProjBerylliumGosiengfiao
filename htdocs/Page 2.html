@@ -15,19 +15,24 @@
 	
 	<body>
 		<nav>
-            <a href="../index.html">HOMEPAGE</a>
-            <a href="Page 1.html">INTRODUCTION</a>
-            <a href="Page 2.html"><b>MECHANICS</b></a>
-            <div id="charanav">
-                <a href="Page 3.html" class ="charanav-button">CHARACTERS</a>
-                <div class="charanav-content">
-                    <a href="Artem.html">Artem Wing</a>
-                    <a href="Luke.html">Luke Pearce</a>
-                    <a href="Marius.html">Marius von Hagen</a>
-                    <a href="Vyn.html">Vyn Richter</a>
-                </div>
+            <div id="slidco">
+                <a href="../index.html" class="slidco1">HOMEPAGE</a>
+                <a href="Page 1.html" class="slidco2">INTRODUCTION</a>
+                <a href="Page 2.html" class="slidco3"><b>MECHANICS</b></a>
+                <a href="Page 3.html" class="slidco4">CHARACTERS</a>
+                <!-- chracter dropbox
+                <div id="charanav">
+                    <a href="Page 3.html" class ="charanav-button">CHARACTERS</a>
+                    <div class="charanav-content">
+                        <a href="Artem.html">Artem Wing</a>
+                        <a href="Luke.html">Luke Pearce</a>
+                        <a href="Marius.html">Marius von Hagen</a>
+                        <a href="Vyn.html">Vyn Richter</a>
+                    </div>
+                </div> -->
+                <a href="Page 4.html" class="slidco5">EVENTS</a>
+                <hr class="slider">
             </div>
-            <a href="Page 4.html">EVENTS</a>
         </nav>
 
         <aside id="toc">
@@ -77,10 +82,10 @@
                             "../images/mechanics/screenshots/deck tut.jpg"]
                             var description1=["Debate Win Screen", "Main Deck", "Support Deck", "In-Game Deck Tutorial"]
                             var order1 = 0;
-                    
+
                             image1.src=images1[order1];
                             document.getElementById('imagedescription1').innerHTML = description1[order1]
-                    
+
                             document.getElementById('next1').onclick = function nextImage() {  
                                 order1++;
                                 if (order1 > 3) {
@@ -89,7 +94,7 @@
                                 image1.src=images1[order1];
                                 document.getElementById('imagedescription1').innerHTML = description1[order1];
                             };
-                    
+
                             document.getElementById('prev1').onclick = function prevImage() {
                                 order1--;
                                 if (order1 < 0) {
@@ -1056,6 +1061,20 @@
         </section>
 
         <footer id="footer">
+            <button id="btt"></button>
+                <script>
+                    var scrollToTopBtn = document.getElementById("btt");
+                    var rootElement = document.documentElement;
+    
+                    function scrollToTop() {
+                        rootElement.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+                    }
+                    scrollToTopBtn.addEventListener("click", scrollToTop);
+                </script>
+
             <div id="references">
                 <p>REFERENCES (scroll for more)</p>
                 <ul class="indent">
@@ -1065,7 +1084,7 @@
                     <li>Si, N. (2022, January 3). <a href = "https://progameguides.com/tears-of-themis/how-do-limited-tears-work-in-tears-of-themis/" target="_blank">How do Limited Tears work in Tears of Themis</a> Pro Game Guides.</li>
                     <li>Tears of Temis Wiki Development Team. (n.d.). <a href = "https://tearsofthemis.miraheze.org/wiki/Tears_of_Themis_Wiki" target="_blank">Tears of Temis Wiki.</a></li>
                     <li>miHoYo. (n.d.). <a href = "https://tot.hoyoverse.com/en-us/story" target="_blank">Tears of Themis Official Website (Story).</a></li>
-                    <li>Oona Tempest「ウーナ」. (2021, August 7).   <a href = "https://sweetnspicyreviews.com/2021/08/07/tears-of-themis-full-release-game-review-beginners-guide/" target="_blank">EARS OF THEMIS | FULL RELEASE | GAME REVIEW & BEGINNER’S GUIDE.</a> Sweet & Spicy Otome Game Reviews.</li>
+                    <li>Oona Tempest「ウーナ」. (2021, August 7).   <a href = "https://sweetnspicyreviews.com/2021/08/07/tears-of-themis-full-release-game-review-beginners-guide/" target="_blank">TEARS OF THEMIS | FULL RELEASE | GAME REVIEW & BEGINNER’S GUIDE.</a> Sweet & Spicy Otome Game Reviews.</li>
                 </ul>
             </div>
             <p>Copyright © 2020 miHoYo All Rights Reserved</p>
