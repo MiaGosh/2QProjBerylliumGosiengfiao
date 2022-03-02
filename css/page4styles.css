@@ -16,11 +16,15 @@
         }
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         margin: 0;
         color: #2F3362;
         overflow-x: hidden;
-        background-color:hsla(207, 17%, 90%, 0.849);
+        background-color:hsla(60, 100%, 99%, 0.911);
     }
 
     a {
@@ -48,7 +52,25 @@
         margin: auto;
     }
 
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(113, 112, 117); 
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(72, 70, 87); 
+    }
+
     nav {
+        height: 50px;
         background-color: #2F3362;
         position: fixed;
         top: 0;
@@ -56,20 +78,77 @@
         z-index: 2;
     }
 
-    nav > a {
+    nav > #slidco {
+        display: inline-block;
+    }
+
+    nav > #slidco > a {
         float: left;
         text-align: center;
         padding: 13px 18px;
-        margin: 3px;
+        width: 150px;
+        margin-top: 1px;
         font-size: 18px;
-        color: hsla(34, 9%, 85%, 0.965);
+        color: hsla(60, 100%, 99%, 0.911);
         transition: 0.1s;
     }
 
-    nav > a:hover
-    {
-        color: hsla(34, 9%, 85%, 0.767);
-        font-size: 17px;
+    nav > #slidco > div > a {
+        float: left;
+        text-align: center;
+        padding: 13px 18px;
+        width: 150px;
+        margin-top: 1px;
+        font-size: 18px;
+        color: hsla(60, 100%, 99%, 0.911);
+        transition: 0.1s;
+    }
+
+    #slidco > .slidco:hover ~ hr.slider {
+        transition: 0.1s;
+    }
+
+    #slidco > .slidco1:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -920px;
+        width: 170px;
+    }
+
+    #slidco > .slidco2:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -750px;
+    }
+
+    #slidco > .slidco3:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -550px;
+        width: 175px;
+    }
+
+    #slidco > .slidco4:hover ~ hr.slider {
+        display: inline-block;
+        margin-left:  -375px;
+    }
+
+    #slidco > .slidco5:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -175px;
+        width: 175px;
+    }
+
+    hr.slider {
+        position: relative;
+        display: none;
+        height: .25rem;
+        width: 200px;
+        margin-top: 40px;
+        margin-left: -905px;
+        background: hsla(34, 9%, 85%, 0.965);
+        border: none;
+        transition: .3s ease-in-out;
+
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
     }
 
     #charanav {
@@ -115,58 +194,87 @@
         display: block;
     }
 
-    #toc {
-        float: right;
-        font-size: 12px;
-        background-color: #f1f1f1;
-        border: #0c114d 1px solid;
+    #content {
+        animation-name: fadeIn;
+        animation-duration:  1.5s;
+    }
+
+    #year {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #year.y2021 {
+        padding-top: 70px;
+    }
+
+    #year.y2022 {
+        padding-top: 30px;
+    }
+
+    #months {
+        font-size: 30px;
+        margin-top: -20px;
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    #months > p{
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        font-style: oblique;
+        color: #616268;
+    }
+
+    #months > button {
+        display: inline-block;
+        background-color:hsla(60, 100%, 99%, 0.911);
+        width: 200px;
+        border: none;
+    }
+
+    #months > button > a{
+        color: #2F3362;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    #months > button> a:hover{
+        opacity: 0.75;
         border-radius: 10px;
-        margin-top: 80px;
-        margin-left: 15px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        width: 250px;
-        color: #0c114d;
-
-        animation-name: fadeIn;
-        animation-duration:  1.5s;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        color: hsla(60, 100%, 99%, 0.911);
+        background-color: #2F3362;
+        box-shadow: 0px 8px 16px 0px #2F3362;
+        transition: 0.2s;
     }
 
-    #toc > ul  {
-        list-style: none;
-        padding-left: 15px;
-        padding-right: 15px;
+    #months.y2022 {
+        margin-bottom: 80px;
     }
 
-    #toc > ul > li {
-        padding: 5px;
+    .events {
+        display: none;
     }
 
-    #toc > ul > li:hover {
-        background-color: #e2e2e2;
+    #closemonth {
+        border: none;
+        background-color: hsla(60, 100%, 99%, 0.911);
+        display: inline-block;
+        margin-top: -20px;
+        margin-left: 5px;
+        font-size: 15px;
+        vertical-align: super;
     }
 
-    #toc > ul > li > a {
-        color: #0c114d;
-    }
-
-    #toc > ul > li.indent2 > a {
-        color: #0c114d;
-        padding-left: 30px;
-    }
-
-    #toc > ul > li > a:visited {
-        color: #0c114d;
-    }
-
-    #events {
-        background-color: hsla(205, 46%, 95%, 0.767);
-        max-width: 80%;
-        padding-bottom: 170px;
-        padding-top: 60px;
-
-        animation-name: fadeIn;
-        animation-duration:  1.5s;
+    #closemonth:hover {
+        color: #17192e;
+        transition: 0.3s;
+        text-decoration: underline;
     }
 
     #footer {
@@ -182,6 +290,23 @@
 
         animation-name: fadeIn;
         animation-duration:  1.5s;
+    }
+
+    #footer > #btt {
+        background: url('../images/mechanics/arrows.png') no-repeat -399px -13px;
+        border: none;
+        display: block;
+        position: absolute;
+
+        padding: 13px 18px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 97%;
+        transition: 0.1s;
+    }
+
+    #footer > #btt:hover {
+        opacity: 0.5;
     }
 
     #references {

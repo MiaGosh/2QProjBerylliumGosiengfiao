@@ -16,11 +16,15 @@
         }
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         margin: 0;
         color: #2F3362;
         overflow-x: hidden;
-        background-color:hsla(205, 46%, 95%, 0.767);
+        background-color:hsla(60, 100%, 99%, 0.911);
     }
 
     a {
@@ -43,7 +47,25 @@
         padding-left: 30px;
     }
 
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(113, 112, 117); 
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(72, 70, 87); 
+    }
+
     nav {
+        height: 50px;
         background-color: #2F3362;
         position: fixed;
         top: 0;
@@ -51,20 +73,77 @@
         z-index: 2;
     }
 
-    nav > a {
+    nav > #slidco {
+        display: inline-block;
+    }
+
+    nav > #slidco > a {
         float: left;
         text-align: center;
         padding: 13px 18px;
-        margin: 3px;
+        width: 150px;
+        margin-top: 1px;
         font-size: 18px;
-        color: hsla(34, 9%, 85%, 0.965);
+        color: hsla(60, 100%, 99%, 0.911);
         transition: 0.1s;
     }
 
-    nav > a:hover
-    {
-        color: hsla(34, 9%, 85%, 0.767);
-        font-size: 17px;
+    nav > #slidco > div > a {
+        float: left;
+        text-align: center;
+        padding: 13px 18px;
+        width: 150px;
+        margin-top: 1px;
+        font-size: 18px;
+        color: hsla(60, 100%, 99%, 0.911);
+        transition: 0.1s;
+    }
+
+    #slidco > .slidco:hover ~ hr.slider {
+        transition: 0.1s;
+    }
+
+    #slidco > .slidco1:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -920px;
+        width: 170px;
+    }
+
+    #slidco > .slidco2:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -750px;
+    }
+
+    #slidco > .slidco3:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -550px;
+        width: 175px;
+    }
+
+    #slidco > .slidco4:hover ~ hr.slider {
+        display: inline-block;
+        margin-left:  -375px;
+    }
+
+    #slidco > .slidco5:hover ~ hr.slider {
+        display: inline-block;
+        margin-left: -175px;
+        width: 175px;
+    }
+
+    hr.slider {
+        position: relative;
+        display: none;
+        height: .25rem;
+        width: 200px;
+        margin-top: 40px;
+        margin-left: -905px;
+        background: hsla(34, 9%, 85%, 0.965);
+        border: none;
+        transition: .3s ease-in-out;
+
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
     }
 
     #charanav {
